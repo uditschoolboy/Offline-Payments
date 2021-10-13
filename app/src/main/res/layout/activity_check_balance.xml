@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CheckBalance">
+
+    <ScrollView android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingHorizontal="15dp"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/simselect"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sim1select"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="Sim 1"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/sim2select"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="Sim 2"
+                    android:checked="false"/>
+
+            </RadioGroup>
+
+            <Button
+                android:layout_toLeftOf="@+id/scan_and_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View account balance"
+                android:onClick="checkBalance"
+                android:layout_margin="16dp"/>
+            <TextView
+                android:id="@+id/txt_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="45sp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/primaryDarkBlack"
+                />
+
+<!--            <EditText-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:id="@+id/txtViewStatus"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textSize="20sp"-->
+<!--                />-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

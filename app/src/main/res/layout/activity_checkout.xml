@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="20dp"
+    android:background="@drawable/lower"
+    tools:context=".Checkout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="0dp"
+                    android:text="Price : \u20B9 1.00\nDiscount : \u20B9 0.00\nDelivery : Free"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Total : \u20B9 1.00"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginVertical="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/order" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginVertical="5dp"
+            android:onClick="checkoutButtonClicked"
+            android:text="Checkout"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

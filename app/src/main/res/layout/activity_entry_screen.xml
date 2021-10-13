@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/lower"
+    android:layout_height="match_parent"
+    tools:context=".EntryScreen">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+                <Button
+                    android:id="@+id/buttonupi"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:maxHeight="5dp"
+                    android:text="UPI" />
+
+                <Button
+                    android:id="@+id/buttoncredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Credit/Debit" />
+
+                <Button
+                    android:id="@+id/buttonwallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Wallet" />
+
+                <Button
+                    android:id="@+id/buttonoffline"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:onClick="offlinePayment"
+                    android:text="Offline Pay" />
+
+                <Button
+                    android:id="@+id/buttoncheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:onClick="checkBalance"
+                    android:text="Check Balance" />
+
+                <Button
+                    android:id="@+id/buttonhistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:onClick="transactionsHistory"
+                    android:text="Transaction History" />
+
+
+                <TextView
+                    android:id="@+id/interntSpeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="80dp"
+            android:layout_height="68dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:clickable="true"
+            android:onClick="scanAndPayButtonClicked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.253"
+            app:srcCompat="@drawable/qricon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
